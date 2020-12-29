@@ -116,11 +116,100 @@
       </div>
     </div>
   </section>
-<!-- Two Part Container with Descriptions -->
+<!-- Section 3: Responsive Image  -->
 <section>
  <div class="container">
-   <img class="responsive-img hoverable" src="/images/Homepage-three-12.png" alt="">
+   <img class="responsive-img" src="/images/Homepage-three-12.png" alt="">
  </div>
+</section>
+
+<!-- Section 4: Contact Form -->
+<section>
+   <!-- form container -->
+   <a name="contact"></a>
+   <div class="container left-align" id="form-container">
+       <div class="row">
+           <div class="col s12 right-align">
+             <div class="container">
+              <h2>
+                Get in touch.
+            </h2>
+            <p style="color:#386641; font-size: 1.25rem;">
+             We’d love to get started on your project! Contact us by phone at (440) 366-0002 or fill out our Quote Request Form below so that we can reach out to you! </p>
+             </div>
+             
+           </div>
+       </div>
+       <div class="row">
+           <form class="col s12">
+               <div class="row center">
+                   <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left: 3rem;"
+                       class="input-field col s5">
+                       <input placeholder="First Name" id="first_name" type="text" class="validate"
+                           style="border-bottom: none;">
+                   </div>
+                   <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left:2rem;"
+                       class="input-field col s5">
+                       <input placeholder="Last Name" id="last_name" type="text" class="validate"
+                           style="border-bottom: none;">
+                   </div>
+               </div>
+               <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left: 3rem;"
+                    class="input-field col s5">
+                    <input placeholder="Email" id="email" type="text" class="validate"
+                        style="border-bottom: none;">
+                </div>
+                <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left:2rem;"
+                    class="input-field col s5">
+                    <input placeholder="Mobile Number" id="number" type="text" class="validate"
+                        style="border-bottom: none;">
+                </div>
+            </div>
+          
+               <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left: 3rem; color: grey;" class="input-field col s5">
+                  <select>
+                    <option value="" style="color: lightgrey;" disabled selected>Services Requested</option>
+                    <option value="snow">Snow and Ice Management</option>
+                    <option value="landscaping">Landscaping & Lawn Care</option>
+                    <option value="construction">Construction</option>
+                  </select>
+                </div>
+                <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left: 2rem; color: grey;" class="input-field col s5">
+                  <select>
+                    <option value="" style="color: lightgrey;" disabled selected>Preferred Contact</option>
+                    <option value="snow">Snow and Ice Management</option>
+                    <option value="landscaping">Landscaping & Lawn Care</option>
+                    <option value="construction">Construction</option>
+                  </select>
+                </div>
+              
+               </div>
+               <div class="row">
+                   <div style="border-style: solid; border-radius: 15px; border-color: #386641; border-width: 1px; margin-left: 4rem;"
+                       class="input-field col s10">
+                       <input placeholder="Message" id="message" type="text" class="validate"
+                           style="border-bottom: none;">
+                   </div>
+               </div>
+           </form>
+       </div>
+       <!-- button -->
+       <div class="row center-align" style="padding-bottom: 1rem; ">
+           <div class="col s12">
+               <button id="submit" style="background-color: #4DC2BD;border-radius: 10px;"
+                   class="btn waves-effect waves-light" type="submit" name="action">Submit
+               </button>
+           </div>
+       </div>
+   </div>
+
+
+
+
+
+
 </section>
 
 <footer>
@@ -132,3 +221,14 @@
 <script src="js/index.js"></script>
 
 </body>
+
+<div class="section left-align" id="hidden-div">
+  <div class="container">
+      <div class="row">
+          <div class="col s12">
+              <h3 style="color: #4DC2BD;">Thank you for submitting your information.</h3>
+              <h5>We'll be in contact shortly.</h5>
+          </div>
+      </div>
+  </div>
+</div>
