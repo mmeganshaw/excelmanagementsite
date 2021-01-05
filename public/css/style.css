@@ -47,7 +47,7 @@ p{
 .landing {
     position: relative;
     background: url('../images/Excel_Home_Hero.png') no-repeat center center/cover;
-    height:75vh;
+    height:65vh;
   }
   
   .landing-inner {
@@ -127,4 +127,10 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.space {
+    margin-right: 1rem;
+    color: white;
+    font-weight: 500;
 }
