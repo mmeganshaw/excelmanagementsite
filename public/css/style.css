@@ -57,6 +57,12 @@ p{
     background: url('../images/About-Us.png') no-repeat center center/cover;
     height:55vh;
   }
+
+  .american-flag-about {
+    position: relative;
+    background: url('../images/american-flag.png') no-repeat center center/cover;
+    height:65vh;
+}
   
   .landing-inner {
     color: #fff;
@@ -165,3 +171,4 @@ footer {
     color: white;
     font-weight: 500;
 }
+
