@@ -64,6 +64,12 @@ p{
     height:55vh;
 }
 
+.landing-careers {
+    position: relative;
+    background: url('../images/Careers-Header.png') no-repeat center center/cover;
+    height:55vh;
+}
+
 .american-flag-about {
     position: relative;
     background: url('../images/american-flag.png') no-repeat center center/cover;
@@ -178,3 +184,11 @@ footer {
     font-weight: 500;
 }
 
+.careers-container {
+    background-color: #386641;
+    color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 475px;
+    margin-bottom: 1rem;
+}

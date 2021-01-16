@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const { resourceUsage } = require("process");
 
 const app = express();
 
@@ -14,6 +15,10 @@ module.exports = function(app) {
 
     app.get("/contact", function(req,res) {
         res.sendFile(path.join(__dirname + "/../public/contact.html"))
+    })
+
+    app.get("/careers", function(req, res) {
+        res.sendFile(path.join(__dirname + "/../public/careers.html"))
     })
 
     app.get("*", function(req,res) {
