@@ -21,7 +21,7 @@ h3 {
 h4 {
     font-weight: 600;
     font-size: 1.5rem;
-    color: #386641;
+    color: #384B91;
 }
 h4 {
     font-weight: 500;
@@ -32,14 +32,14 @@ h4 {
 h5 {
     font-weight: 600;
     font-size: 1rem;
-    color: #386641;
+    color: #384B91;
     margin: 0;
 }
 
 p{
     font-size: 1.2rem;
     font-weight: 300;
-    color: #386641;
+    color: #384B91;
 }
 
 .smaller {
@@ -48,8 +48,8 @@ p{
 
 .landing {
     position: relative;
-    background: url('../images/Excel_Home_Hero.png') no-repeat center center/cover;
-    height:72vh;
+    background: url('../images/home/leaderboad-16-min.png') no-repeat center center/cover;
+    height:75vh;
   }
 
 .landing-about {
@@ -103,15 +103,15 @@ p{
   
   .landing-inner {
     color: #fff;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     height: 100%;
     width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
   }
 
   .landing-inner-other {
@@ -151,7 +151,7 @@ nav {
 }
 
 .excel-green {
-    color: #386641;
+    color: #384B91;
 }
 
 .excel-grey {
@@ -168,7 +168,7 @@ nav {
 .button-hero {
     background-color: white;
     border-radius: 5px;
-    color: #386641;
+    color: #384B91;
     margin-top: 1.5rem;
     padding: 1rem;
     width: 100px;
@@ -176,12 +176,12 @@ nav {
 }
 
 .bold-green {
-    color:#386641;
+    color:#384B91;
     font-weight: 700;
 }
 
 .soft-green {
-    color:#386641;
+    color:#384B91;
     font-weight: 300; 
 }
 
@@ -193,7 +193,7 @@ nav {
 }
 
 footer {
-    background-color: #386641;
+    background-color: #384B91;
     overflow: auto;
     padding: 1rem;
     align-items: center;
@@ -210,7 +210,7 @@ footer {
 }
 
 .careers-container {
-    background-color: #386641;
+    background-color: #384B91;
     color: white;
     padding: 2rem;
     border-radius: 5px;
@@ -219,4 +219,11 @@ footer {
 
 .light {
     font-weight: 300;
+}
+
+.center-box {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%
 }
