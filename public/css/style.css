@@ -48,8 +48,8 @@ p{
 
 .landing {
     position: relative;
-    background: url('../images/home/leaderboad-16-min.png') no-repeat center center/cover;
-    height:75vh;
+    background: url('../images/Excel_Home_Hero.png') no-repeat center center/cover;
+    height:65vh;
   }
 
 .landing-about {
@@ -109,9 +109,9 @@ p{
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: right;
-    justify-content: right;
-    text-align: right;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
   }
 
   .landing-inner-other {
@@ -226,4 +226,12 @@ footer {
     margin-left: auto; 
     margin-right: auto; 
     width: 50%
+}
+
+.home-contact {
+    max-width: 1000px;
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }

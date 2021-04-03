@@ -96,82 +96,125 @@
       </div>
     </div>
   </section>
-  
+
+
+
   
 <!-- Section 3: Contact Form -->
 <section>
-    <div class="container" style="padding-left: 2rem;" >
-        <div class="row">
-            <div class="col s12">
-                <form action="#">
-                <!-- First Questions -->
-                <p>What services did Excel Management provide you?</p>
-                    <p>
-                      <label>
-                        <input type="checkbox" />
-                        <span>Snow Removal</span>
-                      </label>
-                    </p>
-                    <p>
-                        <label>
-                          <input type="checkbox" />
-                          <span>Construction</span>
-                        </label>
-                      </p>
-                      <p>
-                        <label>
-                          <input type="checkbox" />
-                          <span>Landscaping</span>
-                        </label>
-                      </p>
-                      <p>
-                        <label>
-                          <input type="checkbox" />
-                          <span>Irrigation</span>
-                        </label>
-                      </p>
-                <!-- First Questions -->
-                <p>How would you rate the quality of work you received?</p>
-                <p>
+  <!-- form container -->
+  <a name="contact"></a>
+  <div class="container" id="form-container">
+        <form>
+            <!-- Rating -->
+            <div class="row">
+            <div class="input-field col s12">
+              <p>What services did Excel Management provide you?</p>
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Snow Removal</span>
+                </label>
+              </p>
+              <p>
                   <label>
-                    <input type="checkbox" />
-                    <span>Excellent</span>
+                    <input id="construction" type="checkbox" />
+                    <span>Construction / Remodeling</span>
                   </label>
                 </p>
                 <p>
-                    <label>
-                      <input type="checkbox" />
-                      <span>Good</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input type="checkbox" />
-                      <span>Fair</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input type="checkbox" />
-                      <span>Poor</span>
-                    </label>
-                  </p>
-                </form>
+                  <label>
+                    <input id="landscaping" type="checkbox" />
+                    <span>Landscaping</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input id="irrigation" type="checkbox" />
+                    <span>Irrigation</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input id="outdoor" type="checkbox" />
+                    <span>Outdoor Living</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input id="concrete" type="checkbox" />
+                    <span>Concrete</span>
+                  </label>
+                </p>
             </div>
-        </div>
-    </div>
-    
- </section>
-
-<!-- Section 4: Contact Block -->
- <section>
-    <div class="container hide-on-med-and-down">
-      <div class="row">
-        <div class="col s12">
-          <img class="responsive-img" src="/images/About-Us-Bottom.png" alt="">
-        </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <p>How would you rate the work that you received?</p>
+              <select>
+                <option style="color: black;" value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Fair</option>
+                <option value="Excellent">Poor</option>
+              </select>
+            </div>
+            </div>
+            <!-- Row TWo -->
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <p>Were services you received done in a timely manner?</p>
+                <select>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Neither">I don't feel strongly either way.</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <p>How would you rate the communication regarding your project?</p>
+                <select>
+                  <option style="color: black;" value="Excellent">Excellent</option>
+                  <option value="Good">Good</option>
+                  <option value="Excellent">Fair</option>
+                  <option value="Excellent">Poor</option>
+                </select>
+              </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <p>Would you recommend Excel Management to others?</p>
+                  <select>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Neither">I don't feel strongly either way.</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <p>Any additional comments?</p>
+                  <div
+                  class="input-field col s12">
+                  <input placeholder="Your message here" d="message" type="text" class="validate"
+                      style="border-bottom: none;">
+                  </div>
+                </div>
+                </div>
+             
+          </form>
       </div>
-    </div>
+      <!-- button -->
+      <div class="row center-align" style="padding-bottom: 1rem; ">
+          <div class="col s12 m6">
+              <button id="submit" style="background-color: #384B91; border-radius: 10px; text-decoration-color: orange;"
+                  class="btn-large waves-effect waves-light" type="submit" name="action">Submit
+              </button>
+          </div>
+      </div>
+  </div>
+
+</section>
 
 
 <footer>
