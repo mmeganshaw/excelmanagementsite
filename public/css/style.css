@@ -235,3 +235,13 @@ footer {
     justify-items: center;
     align-items: center;
 }
+
+select {
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    .center-form {
+        margin-left: -2rem;
+    }
+}
