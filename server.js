@@ -24,6 +24,16 @@ app.get('/contact', (req, res) => {
 });
 
 // route definition
+app.get('/careers', (req, res) => {
+    res.render('careers', {layout: false});
+});
+
+// route definition
+app.get('/about', (req, res) => {
+    res.render('about', {layout: false});
+});
+
+// route definition
 app.get('/', (req, res) => {
     res.render('home', {layout: false});
 });
@@ -36,6 +46,51 @@ app.get('/customer-survey', (req, res) => {
 app.get('/thank-you', (req,res) => {
     res.render('thankyou', {layout: false});
 })
+
+// services pages
+
+app.get('/construction', (req,res) => {
+    res.render('construction', {layout: false});
+})
+
+app.get('/landscaping-installation', (req,res) => {
+    res.render('landscape-install', {layout: false});
+})
+
+app.get('/landscaping', (req,res) => {
+    res.render('landscape-maint', {layout: false});
+})
+
+app.get('/snow-ice-management', (req,res) => {
+    res.render('snow', {layout: false});
+})
+
+app.get('/outdoor-living', (req,res) => {
+    res.render('outdoor-living', {layout: false});
+})
+
+app.get('/roofing-siding', (req,res) => {
+    res.render('roofing', {layout: false});
+})
+
+app.get('/decks-fences', (req,res) => {
+    res.render('decks', {layout: false});
+})
+
+app.get('/kitchen-bath', (req,res) => {
+    res.render('kitchens', {layout: false});
+})
+
+app.get('/irrigation', (req,res) => {
+    res.render('irrigation', {layout: false});
+})
+
+app.get('/concrete', (req,res) => {
+    res.render('concrete', {layout: false});
+})
+
+
+
 
 // port declaration - 5000 for heroku 
 const PORT = process.env.PORT || 5000;
@@ -65,7 +120,7 @@ app.post('/send', (req, res) => {
     service: 'gmail',
     auth: {
         user: 'usethisemailtosendemails@gmail.com', // example user
-        pass: 'Emailandstuff12'  // generated ethereal password
+        pass: 'Emailandstuff12'  // example password
     },
     tls:{
         rejectUnauthorized:false
@@ -75,8 +130,8 @@ app.post('/send', (req, res) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: '"Nodemailer Contact" <usethisemailtosendemails@gmail.com>', // sender address
-      to: 'mmeganshaw@gmail.com', // list of receivers
+      from: '"Contact Request" <usethisemailtosendemails@gmail.com>', // sender address
+      to: 'anthonyz@excelmanagementllc.com', // list of receivers
       subject: 'Website Contact Request', // Subject line
       text: 'Hello world?', // plain text body
       html: output // html body
@@ -125,8 +180,8 @@ app.post('/send-survey', (req, res) => {
     
         // setup email data with unicode symbols
         let mailOptions = {
-          from: '"Nodemailer Contact" <usethisemailtosendemails@gmail.com>', // sender address
-          to: 'mmeganshaw@gmail.com', // list of receivers
+          from: '"Survey Response" <usethisemailtosendemails@gmail.com>', // sender address
+          to: 'anthonyz@excelmanagementllc.com', // list of receivers
           subject: 'Website Contact Request', // Subject line
           text: 'Hello world?', // plain text body
           html: survey // html body
