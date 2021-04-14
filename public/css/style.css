@@ -64,6 +64,12 @@ p{
     height:55vh;
 }
 
+.landing-survey {
+  position: relative;
+  background: url('../images/landscaping-header.png') no-repeat center center/cover;
+  height:55vh;
+}
+
 .landing-snow {
     position: relative;
     background: url('../images/Snow-Header.png') no-repeat center center/cover;
@@ -87,7 +93,6 @@ p{
     background: url('../images/Construction-Header.png') no-repeat center center/cover;
     height:55vh;
 }
-
 
 .landing-careers {
     position: relative;
@@ -136,7 +141,6 @@ p{
     font-size: 4rem;
     font-weight: 500;
 }
-
 
 nav {
     background-color: white;
@@ -244,4 +248,65 @@ select {
     .center-form {
         margin-left: -2rem;
     }
+}
+
+.swiper-container {
+  height: 65vh;
+  margin-bottom: 3rem;
+  
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.swiper-inner {
+    padding-top: 2em;
+    color: white;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+.swiper-inner-2 {
+  padding-top: 2em;
+  color: white;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+#slide-1 {
+  position: relative;
+  background: url('../images/landscaping-header.png') no-repeat center center/cover;
+}
+
+#slide-2 {
+  position: relative;
+  background: url('../images/slider2.png') no-repeat center center/cover;
+}
+#slide-3 {
+  position: relative;
+  background: url('../images/slide3.png') no-repeat center center/cover;
+}
+
+.space {
+  color: white;
+}
+
+.space:hover {
+  color: lightgrey;
 }
