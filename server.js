@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
 const path = require('path');
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 const app = express();
 
 // what view engine are we using
@@ -13,6 +15,18 @@ app.set('view engine', 'handlebars');
 // bparser middleware
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json());
+
+const myOAuth2Client = new OAuth2(
+    "207558275265-gpkbiq9sf0ps5g3jofo49j8o7f7ot15g.apps.googleusercontent.com",
+    "_xS__JN1ua5yMiu32KQoRPwj",
+    "https://developers.google.com/oauthplayground"
+)
+
+myOAuth2Client.setCredentials({
+    refresh_token:"1//04MwrCq7AkavyCgYIARAAGAQSNwF-L9IrYR3jGeqihZwL4fxHSj1Lmc9l7bTKYrgY9s_b5PZwZaTRtHAYJyL-gBMLdfN4374hHnk"
+    });
+
+const myAccessToken = myOAuth2Client.getAccessToken()
 
 //  static folder utilized
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -117,9 +131,13 @@ app.post('/send', (req, res) => {
       // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
     service: 'gmail',
-    auth: {
-        user: 'usethisemailtosendemails@gmail.com', // example user
-        pass: 'Emailandstuff12'  // example password
+        auth: {
+            type: "OAuth2",
+            user: "usethisemailtosendemails@gmail.com", //your gmail account you used to set the project up in google cloud console"
+            clientId: "207558275265-gpkbiq9sf0ps5g3jofo49j8o7f7ot15g.apps.googleusercontent.com",
+            clientSecret: "_xS__JN1ua5yMiu32KQoRPwj",
+            refreshToken: "1//04MwrCq7AkavyCgYIARAAGAQSNwF-L9IrYR3jGeqihZwL4fxHSj1Lmc9l7bTKYrgY9s_b5PZwZaTRtHAYJyL-gBMLdfN4374hHnk",
+            accessToken: myAccessToken //access token variable we defined earlier
     },
     tls:{
         rejectUnauthorized:false
@@ -130,7 +148,7 @@ app.post('/send', (req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
       from: '"Contact Request" <usethisemailtosendemails@gmail.com>', // sender address
-      to: 'anthonyz@excelmanagementllc.com', // list of receivers
+      to: 'mmeganshaw@gmail.com', // list of receivers
       subject: 'Website Contact Request', // Subject line
       text: 'Hello world?', // plain text body
       html: output // html body
@@ -142,7 +160,7 @@ app.post('/send', (req, res) => {
       console.log(error);
     } else {
       console.log('Email sent: ' + info.response);
-      res.render('thankyou', {layout: false});
+      res.send({message:'Email has been sent: check your inbox!'})
     }
 
   });

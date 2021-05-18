@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col s12 center">
           <p>
-            We'd love to get started on your project today! Contact us by phone at (440) 366-0002 or fill out our form below so that we can reach out to you!          
+            We'd love to get started on your project today! Contact us by phone at (440) 366-0002 or send us an email at        
         </p>
         </div>
       </div>
@@ -98,11 +98,9 @@
   </section>
   
 
-
-<!-- Section 4: Contact Form -->
+{{!-- 
 <section>
-   <!-- form container -->
-   
+
    <div class="container center-align" id="form-container">
        <div class="container">
          <div class="row">
@@ -180,7 +178,7 @@
        </div>
        
   
-       <!-- button -->
+     
        <div class="row center-align" style="padding-bottom: 1rem; ">
            <div class="col s12">
                <button id="submitButton" style="background-color: #384B91; border-radius: 10px;"
@@ -199,7 +197,7 @@
      </div>
    </div>
 
-</section>
+</section> --}}
 
 <footer>
   <section >
@@ -263,7 +261,7 @@
             console.log(newObject);
             
                 $.post("/send", newObject, function(data) {
-                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+
                 console.log("Posted data: " + newObject);
             });
         })
