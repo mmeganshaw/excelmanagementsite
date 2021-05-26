@@ -269,28 +269,7 @@
   </section>
   
 
-
 <section>
-  <div class="container">
-    <div class="row">
-        <div class="col 12 center">
-            <form action="https://formsubmit.co/mmeganshaw@gmail.com" method="POST">
-              <input type="text" placeholder="Full Name" name="name" required>
-              <input type="email" placeholder="Email Address" name="email" required>
-              <input type="text" placeholder="Phone Number" name="email" required>
-              <input type="text" placeholder="Services Requested" name="email" required>
-              <button type="submit">Send</button>
-          </form>
-
-        </div>
-    </div>
-  </div>
-
-
-
-</section>
-
-{{!-- <section>
 
    <div class="container center-align" id="form-container">
        <div class="container">
@@ -388,7 +367,7 @@
      </div>
    </div>
 
-</section> --}}
+</section>
 
 <footer>
   <section >
@@ -441,38 +420,27 @@
 <script src="public/js/materialize.js"></script>
 <script src="public/js/swiper.js"></script>
 <script src="public/js/index.js"></script>
-
 <script>
     $(document).ready(function() {
-      $('.sidenav').sidenav();
-      $('.carousel').carousel();
-      $('.collapsible').collapsible();
-      $('select').formSelect();
-      $('.modal').modal();
-      $(".dropdown-trigger").dropdown();
-      $('.materialboxed').materialbox();
-
-
         $('#submitButton').on('click', function() {
-            const newObject = {
-                name: $('#name').val().trim(),
-                email: $('#email').val().trim(),
-                phone: $('#phone').val().trim(),
-                preferred: $('#q4').val().trim(),
-                property: $('#q5').val(),
-                services: $('#q6').val(), 
-                message: $('#message').val()
-            }
-            console.log(newObject);
-            
-              $.ajax({
-                url: "https://formsubmit.co/ajax/mmeganshaw@gmail.com",
-                method: "POST",
-                data: {
-                    newObject
-                },
-                dataType: "json"
-            });
+                $.ajax({
+                    method: 'POST',
+                    url: 'https://formsubmit.co/ajax/mmeganshaw@gmail.com',
+                    dataType: 'json',
+                    accepts: 'application/json',
+                    data: {
+                        name: $('#name').val(),
+                        email: $('#email').val(),
+                        phone: $('#phone').val(),
+                        preferred: $('#q4').val(),
+                        property: $('#q5').val(),
+                        services: $('#q6').val(), 
+                        message: $('#message').val()
+                    },
+                    success: (data) => console.log(data),
+                    error: (err) => console.log(err)
+                });
+              
         })
 
     })

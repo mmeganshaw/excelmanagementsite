@@ -172,7 +172,7 @@
             <div class="row center">
               <div class="col s12">
               <button id="submit" style="background-color: #384B91; border-radius: 10px; text-decoration-color: orange; margin-bottom: 2rem;"
-                  class="btn-large waves-effect waves-light" type="submit">Submit
+                  class="btn-large waves-effect waves-light" >Submit
               </button>
               </div>
           </div>
@@ -236,31 +236,27 @@
 <script>
   $(document).ready(function() {
     $('#submit').on('click', function () {
-
       
 
-      const questionOne = $('#surveyrate_1').val().trim();
-      const questionTwo = $('#surveyrate_2').val().trim();
-      const questionThree = $('#surveyrate_3').val().trim();
-      const questionFour = $('#surveyrate_4').val().trim();
-      const questionFive = $('#surveyrate_5').val().trim();
-      const questionSix = $('#surveyrate_6').val().trim();
 
-        const surveyObject = {
-          service: questionOne, 
-          rating: questionTwo,
-          timely: questionThree,
-          communication: questionFour,
-          recommend: questionFive, 
-          message: questionSix
-        }
+       $.ajax({
+                    method: 'POST',
+                    url: 'https://formsubmit.co/ajax/mmeganshaw@gmail.com',
+                    dataType: 'json',
+                    accepts: 'application/json',
+                    data: {
+                        servie: $('#surveyrate_1').val(),
+                        workRating: $('#surveyrate_2').val(),
+                        timelyManner: $('#surveyrate_3').val(),
+                        projectCommunicationRating: $('#surveyrate_4').val(),
+                        recommendToOthers: $('#surveyrate_5').val(),
+                        additionalComments: $('#surveyrate_6').val()
+                    },
+                    success: (data) => console.log(data),
+                    error: (err) => console.log(err)
+                });
 
-      console.log(surveyObject);
-
-          $.post("/send-survey", surveyObject, function(data) {
-                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                console.log("Posted data: " + surveyObject);
-            });
+          
     })
   })
     

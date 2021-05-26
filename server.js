@@ -133,55 +133,7 @@ const PORT = process.env.PORT || 5000;
 
 // })
 
-app.post('/send-survey', (req, res) => {
-    console.log(req.body);
-    const survey = 
-    `<p>You have a new custom survey fill</p>
-    <h3>Contact Details</h3>
-    <ul>
-        <li>Service Provided: ${req.body.service}</li>
-        <li>Overall Rating: ${req.body.rating}</li>
-        <li>Were sevices povided in a timely manner: ${req.body.timely}</li>
-        <li>Communication Rating: ${req.body.communication}</li>
-        <li>Recommend Excel to a Friend?: ${req.body.recommend}</li>
-        <li>Additional Comment: ${req.body.message}</li>
-    </ul>`
 
-    console.log(survey);
-     // create reusable transporter object using the default SMTP transport
-     let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'usethisemailtosendemails@gmail.com', // example user
-            pass: 'Emailandstuff12'  // generated ethereal password
-        },
-        tls:{
-            rejectUnauthorized:false
-          }
-        
-      });
-    
-        // setup email data with unicode symbols
-        let mailOptions = {
-          from: '"Survey Response" <usethisemailtosendemails@gmail.com>', // sender address
-          to: 'anthonyz@excelmanagementllc.com', // list of receivers
-          subject: 'Website Contact Request', // Subject line
-          text: 'Hello world?', // plain text body
-          html: survey // html body
-      };
-    
-        // send mail with object, log error, else print confirm and redirect to thank you page
-        transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-          res.render('thankyou', {layout: false});
-        }
-    
-      });
-
-})
 
 app.listen(PORT, function(){ 
     console.log("listening on port " + PORT);
