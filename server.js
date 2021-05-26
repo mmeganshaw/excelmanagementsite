@@ -103,37 +103,8 @@ app.get('/concrete', (req,res) => {
     res.render('concrete', {layout: false});
 })
 
-
-
 // port declaration - 5000 for heroku 
 const PORT = process.env.PORT || 5000;
-
-// POST: api setup for contact form submission
-// POST: template literal req.body declaration for email config
-// POST: nodemailer middleware setup
-// app.post('/send', (req, res) => {
-//     console.log(req.body);
-//     const output = 
-//     `<p>You have a new contact request</p>
-//     <h3>Contact Details</h3>
-//     <ul>
-//         <li>Name: ${req.body.name}</li>
-//         <li>Email: ${req.body.email}</li>
-//         <li>Email: ${req.body.phone}</li>
-//         <li>Preferred Contact Method: ${req.body.preferred}</li>
-//         <li>Property Type: ${req.body.property}</li>
-//         <li>Service Requested: ${req.body.services}</li>
-//         <li>Message: ${req.body.message}</li>
-//     </ul>`
-
-//      console.log(output);
-
-   
-
-
-// })
-
-
 
 app.listen(PORT, function(){ 
     console.log("listening on port " + PORT);
