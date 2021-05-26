@@ -249,24 +249,24 @@
 <script>
     $(document).ready(function() {
         $('#submitButton').on('click', function() {
-            const newObject = {
-                name: $('#name').val().trim(),
-                email: $('#email').val().trim(),
-                phone: $('#phone').val().trim(),
-                preferred: $('#q4').val().trim(),
-                property: $('#q5').val().trim(),
-                services: $('#q6').val().trim(), 
-                message: $('#message').val().trim()
-            }
-            console.log(newObject);
-            
-                $.post("/send", newObject, function(data) {
-
-                console.log("Posted data: " + newObject);
-            });
+                $.ajax({
+                    method: 'POST',
+                    url: 'https://formsubmit.co/ajax/mmeganshaw@gmail.com',
+                    dataType: 'json',
+                    accepts: 'application/json',
+                    data: {
+                        name: $('#name').val(),
+                        email: $('#email').val(),
+                        phone: $('#phone').val(),
+                        preferred: $('#q4').val(),
+                        property: $('#q5').val(),
+                        services: $('#q6').val(), 
+                        message: $('#message').val()
+                    },
+                    success: (data) => console.log(data),
+                    error: (err) => console.log(err)
+                });
         })
-
-        
 
     })
 
