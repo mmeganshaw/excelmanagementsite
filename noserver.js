@@ -111,27 +111,60 @@ const PORT = process.env.PORT || 5000;
 // POST: api setup for contact form submission
 // POST: template literal req.body declaration for email config
 // POST: nodemailer middleware setup
-// app.post('/send', (req, res) => {
-//     console.log(req.body);
-//     const output = 
-//     `<p>You have a new contact request</p>
-//     <h3>Contact Details</h3>
-//     <ul>
-//         <li>Name: ${req.body.name}</li>
-//         <li>Email: ${req.body.email}</li>
-//         <li>Email: ${req.body.phone}</li>
-//         <li>Preferred Contact Method: ${req.body.preferred}</li>
-//         <li>Property Type: ${req.body.property}</li>
-//         <li>Service Requested: ${req.body.services}</li>
-//         <li>Message: ${req.body.message}</li>
-//     </ul>`
+app.post('/send', (req, res) => {
+    console.log(req.body);
+    const output = 
+    `<p>You have a new contact request</p>
+    <h3>Contact Details</h3>
+    <ul>
+        <li>Name: ${req.body.name}</li>
+        <li>Email: ${req.body.email}</li>
+        <li>Email: ${req.body.phone}</li>
+        <li>Preferred Contact Method: ${req.body.preferred}</li>
+        <li>Property Type: ${req.body.property}</li>
+        <li>Service Requested: ${req.body.services}</li>
+        <li>Message: ${req.body.message}</li>
+    </ul>`
 
-//      console.log(output);
+     console.log(output);
 
-   
+        let transporter = nodemailer.createTransport({
+        service: 'gmail',
+            auth: {
+                type: "OAuth2",
+                user: "usethisemailtosendemails@gmail.com", //your gmail account you used to set the project up in google cloud console"
+                clientId: "207558275265-gpkbiq9sf0ps5g3jofo49j8o7f7ot15g.apps.googleusercontent.com",
+                clientSecret: "_xS__JN1ua5yMiu32KQoRPwj",
+                refreshToken: "1//04MwrCq7AkavyCgYIARAAGAQSNwF-L9IrYR3jGeqihZwL4fxHSj1Lmc9l7bTKYrgY9s_b5PZwZaTRtHAYJyL-gBMLdfN4374hHnk",
+                accessToken: myAccessToken //access token variable we defined earlier
+        },
+        tls:{
+            rejectUnauthorized:false
+        }
+        
+    });
 
+    // setup email data with unicode symbols
+    let mailOptions = {
+      from: '"Contact Request" <usethisemailtosendemails@gmail.com>', // sender address
+      to: 'mmeganshaw@gmail.com', // list of receivers
+      subject: 'Website Contact Request', // Subject line
+      text: 'Hello world?', // plain text body
+      html: output // html body
+  };
 
-// })
+    // send mail with object, log error, else print confirm and redirect to thank you page
+    transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.send({message:'Email has been sent: check your inbox!'})
+    }
+
+  });
+
+})
 
 app.post('/send-survey', (req, res) => {
     console.log(req.body);

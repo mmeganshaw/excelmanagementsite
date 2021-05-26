@@ -110,7 +110,7 @@
     <div class="swiper-slide" id="slide-3">
       <div class="swiper-inner-2">
         <h1>
-         Top Landscaping Install and Maintenance Team In Northern Ohio
+         Top Landscaping Install and Maintenance <br>Team In Northern Ohio
         </h1>
           <span class="hide-on-med-and-down white-text hero-list"><i class="material-icons left">yard</i>Get your yard and gardens ready for spring</span>
           <span class="hide-on-med-and-down white-text hero-list"><i class="material-icons left">yard</i>Kind and courteous professionals available for install or maintenance</span>
@@ -250,25 +250,35 @@
  </div>
 </section>
 
-<!-- Section 4: Contact Form -->
+  <section>
+    <div class="container">
+      <div class="row about-two">
+        <div class="col s12 center">
+          <h3>Northeast Ohio’s Beautification Management Provider  </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+          <p>
+            We'd love to get started on your project today! Contact us by phone at (440) 366-0002 or send us an email at        
+        </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+
+
 <section>
-   <!-- form container -->
-   
+
+
+
+<section>
+
    <div class="container center-align" id="form-container">
-       <div class="row">
-           <div class="col s12 center-align">
-             <div class="container form-container">
-              <h2>
-                Get in touch.
-            </h2>
-            <p class="excel-blue" style="font-size: 1.25rem;">
-             We’d love to get started on your project! Contact us by phone at (440) 366-0002 or fill out our Quote Request Form below so that we can reach out to you! </p>
-             </div>
-             
-           </div>
-       </div>
        <div class="container">
-           <div class="row">
+         <div class="row">
            <form class="col s12 center">
                <div class="row">
                    <div style="border-style: solid; border-radius: 15px; border-color: #384B91;
@@ -305,7 +315,7 @@
                     <option value="concrete">Concrete</option>
                     <option value="outdoor-living">Outdoor Living</option>
                     <option value="roofing-siding">Roofing or Siding</option>
-                    <option value="decks-fences">Decks and Fences</option>
+                    <option value="decks-fences">Decks and Fenc</option>
                   </select>
                 </div>
               </div>
@@ -337,10 +347,13 @@
             </div>
            </form>
        </div>
+
+
+
        </div>
        
   
-       <!-- button -->
+     
        <div class="row center-align" style="padding-bottom: 1rem; ">
            <div class="col s12">
                <button id="submitButton" style="background-color: #384B91; border-radius: 10px;"
@@ -354,7 +367,7 @@
    <div class="container hide-on-med-and-down">
      <div class="row">
        <div class="col s12">
-         <img class="responsive-img" src="public/images/one.png" alt="">
+         <img class="responsive-img" src="/images/one.png" alt="">
        </div>
      </div>
    </div>
@@ -408,6 +421,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="public/js/materialize.js"></script>
 <script src="public/js/swiper.js"></script>
 <script src="public/js/index.js"></script>
@@ -429,15 +443,19 @@
                 email: $('#email').val().trim(),
                 phone: $('#phone').val().trim(),
                 preferred: $('#q4').val().trim(),
-                property: $('#q5').val().trim(),
-                services: $('#q6').val().trim(), 
-                message: $('#message').val().trim()
+                property: $('#q5').val(),
+                services: $('#q6').val(), 
+                message: $('#message').val()
             }
             console.log(newObject);
             
-                $.post("/send", newObject, function(data) {
-                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                console.log("Posted data: " + newObject);
+              $.ajax({
+                url: "https://formsubmit.co/ajax/mmeganshaw@gmail.com",
+                method: "POST",
+                data: {
+                    newObject
+                },
+                dataType: "json"
             });
         })
 
