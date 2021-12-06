@@ -1,32 +1,12 @@
-const express = require("express");
-const bodyParser = require("body-parser"); 
+const express = require("express")
 const exphbs = require("express-handlebars");
-const nodemailer = require("nodemailer");
 const path = require('path');
-const { google } = require("googleapis");
-const OAuth2 = google.auth.OAuth2;
 const app = express();
 
 // what view engine are we using
 app.engine('handlebars', exphbs());
 // set view engine
 app.set('view engine', 'handlebars');
-
-// bparser middleware
-app.use(bodyParser.urlencoded({ extended: false}))
-app.use(bodyParser.json());
-
-const myOAuth2Client = new OAuth2(
-    "207558275265-gpkbiq9sf0ps5g3jofo49j8o7f7ot15g.apps.googleusercontent.com",
-    "_xS__JN1ua5yMiu32KQoRPwj",
-    "https://developers.google.com/oauthplayground"
-)
-
-myOAuth2Client.setCredentials({
-    refresh_token:"1//04MwrCq7AkavyCgYIARAAGAQSNwF-L9IrYR3jGeqihZwL4fxHSj1Lmc9l7bTKYrgY9s_b5PZwZaTRtHAYJyL-gBMLdfN4374hHnk"
-    });
-
-const myAccessToken = myOAuth2Client.getAccessToken()
 
 //  static folder utilized
 app.use('/public', express.static(path.join(__dirname, 'public')));

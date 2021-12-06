@@ -5,6 +5,22 @@ h1 {
     font-weight: 500; 
     font-size: 3rem;
 }
+
+@media (max-width: 991px) {
+    .navbar-fixed .container {
+        margin-left: 0;
+    }
+}
+nav ul a:hover {
+    background-color: transparent;
+}
+@media (min-width: 992px) {
+    .swiper-inner h1 {
+        margin-top: 0;
+    }
+}
+
+
 h2 {
     font-weight: 500;
     font-size: 3.2rem;
@@ -72,7 +88,7 @@ p{
 
 .landing-snow {
     position: relative;
-    background: url('../images/Snow-Header.png') no-repeat center center/cover;
+    background: url('../images/snow_cover-09.png') no-repeat center center/cover;
     height:55vh;
 }
 
@@ -114,7 +130,7 @@ p{
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: left;
     text-align: left;
   }
@@ -264,15 +280,13 @@ select {
 }
 
 .swiper-inner {
-    padding-top: 2em;
     color: white;
     height: 100%;
     width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    justify-content: center;
     text-align: left;
 }
 
