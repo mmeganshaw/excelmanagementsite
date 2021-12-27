@@ -1,7 +1,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>Construction | Excel Management </title>
+    <title>Concrete | Excel Management </title>
 
     <meta name="keywords" content="excel management, construction, landscaping, home beautification" />
     <meta name="description" content="Excel Management | Construction | Landscaping" />
@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,900&display=swap" rel="stylesheet">
     <link href="public/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="public/css/lightbox.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -104,47 +105,72 @@
   <div class="container" style=" margin-top: -2rem;">
       <div class="row">
           <div class="col s4">
-            <img src="public/images/concrete/1.jpg" class="responsive-img materialboxed" alt="">
+            <a href="public/images/concrete/1.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/1.jpg" class="responsive-img" alt="">
+            </a>
           </div>
           <div class="col s4">
-            <img src="public/images/concrete/2.jpg" class="responsive-img materialboxed" alt="">
+             <a href="public/images/concrete/2.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/2.jpg" class="responsive-img" alt="">
+            </a>
+
           </div>
           <div class="col s4">
-            <img src="public/images/concrete/3.jpg" class="responsive-img materialboxed" alt="">
+            <a href="public/images/concrete/3.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/3.jpg" class="responsive-img" alt="">
+            </a>
           </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <img src="public/images/concrete/4.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/4.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/4.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/concrete/5.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/5.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/5.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/concrete/6.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/6.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/6.jpg" class="responsive-img" alt="">
+            </a>
         </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <img src="public/images/concrete/10.jpg" class="responsive-img materialboxed" alt="">
+         <a href="public/images/concrete/10.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/10.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/concrete/11.jpg" class="responsive-img materialboxed" alt="">
+         <a href="public/images/concrete/11.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/11.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/concrete/12.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/12.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/12.jpg" class="responsive-img" alt="">
+            </a>
         </div>
       </div>
       <div class="row">
 
         <div class="col s4">
-          <img src="public/images/concrete/8.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/8.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/8.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/concrete/7.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/7.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/7.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/concrete/9.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/concrete/6.jpg" data-lightbox="concrete">
+              <img src="public/images/concrete/6.jpg" class="responsive-img" alt="">
+            </a>
         </div>
       </div>
 
@@ -163,7 +189,7 @@
                       Stamped Concrete
                   </div>
                   <div class="excel-green collapsible-body light">
-                      Stamped concrete helps to increase longevity whereever it's installed, while also reducing long-term maintenance and care.
+                      Stamped concrete helps to increase longevity wherever it's installed, while also reducing long-term maintenance and care.
                   </div>
               </li>
                  <li>
@@ -275,5 +301,12 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="public/js/materialize.js"></script>
 <script src="public/js/index.js"></script>
+<script src="public/js/lightbox.js"></script>
+  <script>
+    lightbox.option({
+      'fitImagesInViewport': true,
+      'wrapAround': true
+    })
+  </script>
 
 </body>

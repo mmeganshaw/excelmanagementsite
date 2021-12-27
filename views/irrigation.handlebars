@@ -1,8 +1,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>Irrigation | Excel Management </title>
-
+    <title>Outdoor Living | Excel Management </title>
     <meta name="keywords" content="excel management, construction, landscaping, home beautification" />
     <meta name="description" content="Excel Management | Construction | Landscaping" />
     <meta name="MobileOptimized" content="width" />
@@ -14,11 +13,12 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,900&display=swap" rel="stylesheet">
     <link href="public/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="public/css/lightbox.css" rel="stylesheet"/>
 
 </head>
 <body>
 
- 
+    
         <!-- navbar that allows fixed position and mobile collapsible menu -->
         <div class="navbar-fixed">
           <nav class="materialize-white" role="navigation">
@@ -71,8 +71,8 @@
                 <li><a class="excel-green" href="/contact">Contact</a></li>
               </ul>
         </div>
-          </nav>       
-  
+          </nav>
+
   <!-- hero image :) -->
   <section class="landing-irrigation">
       <div class="landing-inner-other">
@@ -103,60 +103,81 @@
     </div>
   </div>
 </section>
-
+  
 
 <!-- Image Gallery -->
 <section>
-  <div class="container">
+  <div class="container" style=" margin-top: -2rem;">
       <div class="row">
-          <div class="col s4">
-            <img src="public/images/drainage/1.jpg" class="responsive-img materialboxed" alt="">
-          </div>
-          <div class="col s4">
-            <img src="public/images/drainage/2.jpg" class="responsive-img materialboxed" alt="">
-          </div>
-          <div class="col s4">
-            <img src="public/images/drainage/3.jpg" class="responsive-img materialboxed" alt="">
-          </div>
-      </div>
-      <div class="row">
-        <div class="col s4">
-          <img src="public/images/drainage/4.jpg" class="responsive-img materialboxed" alt="">
+           <div class="col s4">
+           <a href="public/images/drainage/1.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/1.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/drainage/5.jpg" class="responsive-img materialboxed" alt="">
+            <a href="public/images/drainage/2.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/2.jpg" class="responsive-img" alt="">
+            </a>
         </div>
-        <div class="col s4">
-          <img src="public/images/drainage/6.jpg" class="responsive-img materialboxed" alt="">
+         <div class="col s4">
+           <a href="public/images/drainage/3.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/3.jpg" class="responsive-img" alt="">
+            </a>
         </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <img src="public/images/drainage/7.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/drainage/4.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/4.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/drainage/8.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/drainage/5.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/5.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/drainage/9.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/drainage/6.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/6.jpg" class="responsive-img" alt="">
+            </a>
         </div>
       </div>
       <div class="row">
-
         <div class="col s4">
-          <img src="public/images/drainage/10.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/drainage/7.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/7.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/drainage/11.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/drainage/8.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/8.jpg" class="responsive-img" alt="">
+            </a>
         </div>
         <div class="col s4">
-          <img src="public/images/drainage/12.jpg" class="responsive-img materialboxed" alt="">
+          <a href="public/images/drainage/9.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/9.jpg" class="responsive-img" alt="">
+            </a>
         </div>
       </div>
-
+      <div class="row">
+        <div class="col s4">
+          <a href="public/images/drainage/10.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/10.jpg" class="responsive-img" alt="">
+            </a>
+        </div>
+        <div class="col s4">
+          <a href="public/images/drainage/11.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/11.jpg" class="responsive-img" alt="">
+            </a>
+        </div>
+        <div class="col s4">
+          <a href="public/images/drainage/12.jpg" data-lightbox="landscape">
+              <img src="public/images/drainage/12.jpg" class="responsive-img" alt="">
+            </a>
+        </div>
+      </div> 
   </div>
 </section>
-
 <section >
   <div class="container" style="padding-bottom: 2rem;">
       <div class="row">
@@ -217,6 +238,8 @@
       </div>
   </div>
 </section>
+
+
 <footer>
   <section >
     <div class="container center">
@@ -264,5 +287,12 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="public/js/materialize.js"></script>
 <script src="public/js/index.js"></script>
+<script src="public/js/lightbox.js"></script>
+  <script>
+    lightbox.option({
+      'fitImagesInViewport': true,
+      'wrapAround': true
+    })
+  </script>
 
 </body>
