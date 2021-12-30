@@ -20,6 +20,13 @@ nav ul a:hover {
     }
 }
 
+@media (min-width: 991px) {
+    ul li {
+        font-size: 1.5rem; 
+        color: #384B91;
+    }
+}
+
 
 h2 {
     font-weight: 500;

@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,900&display=swap" rel="stylesheet">
     <link href="public/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="public/css/lightbox.css.css" rel="stylesheet"/>
+    <link href="public/css/lightbox.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -89,103 +89,106 @@
       </div>
     </div>
   </section>
-  
-<!-- Section 3: Contact Form -->
-<section>
-  <!-- form container -->
-  <a name="contact"></a>
-  <div class="container" id="form-container">
- 
-        <form>
-          
-          <div class="row">
-            <div class="input-field col s12">
-              <p>What was the primary service that Excel Management provided to you?</p>
-              <select id="surveyrate_1">
-                <option style="color: black;" value="Snow">Snow</option>
-                <option value="Irrigation">Irrigation</option>
-                <option value="Concrete">Concrete</option>
-                <option value="Siding/Windows">Siding or Windows</option>
-                <option value="construction">General Construction</option>
-                <option value="Siding/Windows">Deck or Fence</option>
-                <option value="Siding/Windows">Outdoor Living</option>
-                <option value="Lanscaping">Landscaping</option>
 
 
-              </select>
-            </div>
-            </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <p>How would you rate the work that you received?</p>
-              <select id="surveyrate_2" >
-                <option style="color: black;" value="Excellent">Excellent</option>
-                <option value="Good">Good</option>
-                <option value="Excellent">Fair</option>
-                <option value="Excellent">Poor</option>
-              </select>
-            </div>
-            </div>
-            <!-- Row TWo -->
-            <div class="row">
-              <div class="input-field col s12">
-                <p>Were services you received done in a timely manner?</p>
-                <select id="surveyrate_3">
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                  <option value="Neither">I don't feel strongly either way.</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <p>How would you rate the communication regarding your project?</p>
-                <select id="surveyrate_4">
-                  <option style="color: black;" value="Excellent">Excellent</option>
-                  <option value="Good">Good</option>
-                  <option value="Excellent">Fair</option>
-                  <option value="Excellent">Poor</option>
-                </select>
-              </div>
+   <div class="container center-align" id="form-container">
+       <div class="container">
+         <div class="row">
+           <form class="col s12 center">
+               
+        
+               <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #384B91;
+               border-width: 1px; color: grey;" class="input-field col s12">
+                  <select id="service">
+                    <option value="" style="color: lightgrey;" disabled selected>What was the primary service that Excel Management provided to you?</option>
+                    <option value="snow">Snow and Ice Management</option>
+                    <option value="landscaping">Landscaping & Lawn Care</option>
+                    <option value="construction">Construction</option>
+                    <option value="concrete">Concrete</option>
+                    <option value="outdoor-living">Outdoor Living</option>
+                    <option value="roofing-siding">Roofing or Siding</option>
+                    <option value="decks-fences">Decks and Fences</option>
+                  </select>
+                </div>
               </div>
               <div class="row">
-                <div class="input-field col s12">
-                  <p>Would you recommend Excel Management to others?</p>
-                  <select id="surveyrate_5">
+                <div style="border-style: solid; border-radius: 15px; border-color: #384B91; border-width: 1px; color: grey;" class="input-field col s12">
+                  <select id="rating" >
+                    <option value="" style="color: lightgrey;" disabled selected>How would you rate the work that you received?</option>
+                    <option style="color: black;" value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                  </select>
+                </div>
+               </div>
+                <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #384B91; border-width: 1px; color: grey;" class="input-field col s12">
+                  <select id="timely">
+                    <option value="" style="color: lightgrey;" disabled selected>Were services you received done in a timely manner?</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                     <option value="Neither">I don't feel strongly either way.</option>
                   </select>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <p>Any additional comments?</p>
-                  <div
-                  class="input-field col s12">
-                  <input placeholder="Your message here" id="surveyrate_6" type="text" class="validate"
-                      style="border-bottom: none;">
-                  </div>
+               </div>
+               <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #384B91; border-width: 1px; color: grey;" class="input-field col s12">
+                  <select id="communication" >
+                    <option value="" style="color: lightgrey;" disabled selected>How would you rate the communication regarding your project?</option>
+                    <option style="color: black;" value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                  </select>
                 </div>
+               </div>
+               <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #384B91; border-width: 1px; color: grey;" class="input-field col s12">
+                  <select id="recommend">
+                    <option value="" style="color: lightgrey;" disabled selected>Would you recommend Excel Management to others?</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Neither">I don't feel strongly either way.</option>
+                  </select>
                 </div>
+               </div>
+               <div class="row">
+                <div style="border-style: solid; border-radius: 15px; border-color: #384B91; border-width: 1px;"
+                class="input-field col s12">
+                <input placeholder="Message" id="message" type="text" class="validate"
+                    style="border-bottom: none;">
+                </div>
+            </div>
+           </form>
+       </div>
 
-            <div class="row center">
-              <div class="col s12">
-              <button id="submit" style="background-color: #384B91; border-radius: 10px; text-decoration-color: orange; margin-bottom: 2rem;"
-                  class="btn-large waves-effect waves-light" >Submit
-              </button>
-              </div>
-          </div>
-             
-          </form>
-      </div>
-      <!-- button -->
+
+
+       </div>
+       
   
-  </div>
+     
+       <div class="row center-align" style="padding-bottom: 1rem; ">
+           <div class="col s12">
+               <button id="submitButton" style="background-color: #384B91; border-radius: 10px;"
+                   class="btn-large waves-effect waves-light" type="submit" name="action">Submit
+               </button>
+           </div>
+       </div>
+      </div>
+   </div>
+
+   <div class="container hide-on-med-and-down">
+     <div class="row">
+       <div class="col s12">
+         
+       </div>
+     </div>
+   </div>
 
 </section>
-
 
 <footer>
   <section >
@@ -194,7 +197,7 @@
         <div class="col s12" style="padding-top: 1rem;">
           <!-- <span><img style="height: 100px" src="/images/excel-logo-10.png" alt=""></span> -->
           <h4 style="color: white;">EXCEL MANAGEMENT</h4> 
-          <P style="color: white;">Commercial Snow Removal, Grounds Management, Landscaping Services and design for Commercial Buildings, Industrial Parks, Retail Shopping Centers, Condominiums, and Apartments or Complexes in North East Ohio | Headquartered in Elyria, Ohio</P>
+          <P style="color: white;">Commercial Snow Removal, Grounds Management, Landscaping Services and design for Commercial Buildings, Industrial Parks, Retail Shopping Centers, Condominiums, and Apartments or Complexes in North East Ohio | Headquartered in Grafton, Ohio</P>
           <HR></HR>
         </div>
         <div class="row center hide-on-med-and-down">
@@ -236,33 +239,30 @@
 <script src="public/js/index.js"></script>
 <script src="public/js/lightbox.js"></script>
 <script>
-  $(document).ready(function() {
-    $('#submit').on('click', function () {
-      
-
-
-       $.ajax({
+    $(document).ready(function() {
+        $('#submitButton').on('click', function() {
+                $.ajax({
                     method: 'POST',
                     url: 'https://formsubmit.co/ajax/contactus@excelmanagementllc.com',
                     dataType: 'json',
                     accepts: 'application/json',
                     data: {
-                        servie: $('#surveyrate_1').val(),
-                        workRating: $('#surveyrate_2').val(),
-                        timelyManner: $('#surveyrate_3').val(),
-                        projectCommunicationRating: $('#surveyrate_4').val(),
-                        recommendToOthers: $('#surveyrate_5').val(),
-                        additionalComments: $('#surveyrate_6').val()
+                        service: $('#service').val(),
+                        rating: $('#rating').val(),
+                        timely: $('#timely').val(),
+                        communication: $('#communication').val(),
+                        recommend: $('#recommend').val(),
+                        message: $('#message').val()
                     },
                     success: (data) => console.log(data),
                     error: (err) => console.log(err)
                 });
+                alert("Thank you for your submission!")
+              
+        })
 
-          
     })
-  })
-    
+
 </script>
 
 </body>
-
