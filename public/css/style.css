@@ -27,6 +27,11 @@ nav ul a:hover {
     }
 }
 
+ul li, 
+.excel-green, 
+.excel-blue {
+    color: #384B91 !important; 
+}
 
 h2 {
     font-weight: 500;
@@ -159,6 +164,9 @@ p{
     padding-top: 5rem;
 }
 
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    color: #384B91;
+}
 
 .top-header {
     font-size: 4rem;
