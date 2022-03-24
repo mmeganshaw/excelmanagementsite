@@ -27,6 +27,19 @@ nav ul a:hover {
     }
 }
 
+nav .sidenav-trigger {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: 56px;
+    margin: 0px;
+}
+.nav-burger {
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
 ul li, 
 .excel-green, 
 .excel-blue {
