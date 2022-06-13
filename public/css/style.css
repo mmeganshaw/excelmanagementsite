@@ -6,6 +6,17 @@ h1 {
     font-size: 3rem;
 }
 
+@media (max-width: 1190px) {
+    .nav-wrapper .right{
+        display: none;
+    }
+}
+@media (min-width: 1191px) {
+    .nav-wrapper .right{
+        display: block;
+    }
+}
+
 @media (max-width: 991px) {
     .navbar-fixed .container {
         margin-left: 0;
@@ -15,6 +26,9 @@ nav ul a:hover {
     background-color: transparent;
 }
 @media (min-width: 992px) {
+    .nav-wrapper {
+        width: 90% !important;
+    }
     .swiper-inner h1 {
         margin-top: 0;
     }
@@ -105,6 +119,12 @@ p{
     height:55vh;
 }
 
+.landing-financing {
+    position: relative;
+    background: url('../images/financing-01.png') no-repeat center center/cover;
+    height:55vh;
+}
+
 .landing-survey {
   position: relative;
   background: url('../images/landscaping-header.png') no-repeat center center/cover;
@@ -143,7 +163,7 @@ p{
 
 .american-flag-about {
     position: relative;
-    background: url('../images/american-flag.png') no-repeat center center/cover;
+    background: url('../images/construction-01.png') no-repeat center center/cover;
     height:65vh;
 }
   

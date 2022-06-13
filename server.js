@@ -41,6 +41,10 @@ app.get('/thank-you', (req,res) => {
     res.render('thankyou', {layout: false});
 })
 
+app.get('/financing', (req,res) => {
+    res.render('financing', {layout: false});
+})
+
 // services pages
 
 app.get('/construction', (req,res) => {
