@@ -119,6 +119,7 @@ p{
     height:55vh;
 }
 
+/* here's a change */
 .landing-financing {
     position: relative;
     background: url('../images/financing-01.png') no-repeat center center/cover;
