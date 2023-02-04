@@ -317,7 +317,6 @@ select {
 
 .swiper-container {
   height: 65vh;
-  margin-bottom: 3rem;
   
 }
 
@@ -402,5 +401,49 @@ input.invalid:not([type]), input.invalid:not([type]):focus, input.invalid[type=t
 @media (min-width: 991px) and (max-width: 1300px) {
     .navbar-fixed li {
         font-size: .889rem;
+    }
+}
+
+
+.social {
+    background-color:#384B91;
+    color: white !important;
+    padding: 3rem 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.social h3 {
+    color: white !important;
+}
+.social .col {
+    display: flex; 
+    align-items: center;
+}
+.social img {
+    width: auto;
+    height: 80px;
+    margin-right: 20px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+}
+
+
+@media (hover:hover) {
+    .social a:hover img {
+        filter: invert(29%) sepia(96%) saturate(1922%) hue-rotate(343deg) brightness(101%) contrast(91%) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .social h3 {
+        margin-bottom: 1.5rem;
+        font-size: 30px;
+        text-align: center;
+    }
+    .social .l4 {
+        display: flex;
+        justify-content: center;
+    }
+    .social img {
+        height: 50px;
     }
 }
