@@ -447,3 +447,19 @@ input.invalid:not([type]), input.invalid:not([type]):focus, input.invalid[type=t
         height: 50px;
     }
 }
+
+.iframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+}
+
+.iframe iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
